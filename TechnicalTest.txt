@@ -1,0 +1,48 @@
+Technical test instructions
+===========================
+
+Notice: Do not change project structure, classes name, methods name and signature. Only implement
+methods that are identified with 'TODO' key word. If you want, you may create additional classes but
+they need to be integrated with existing structure/classes.
+
+Tip: Remember this test does not have a defined time frame to complete it. However, delivery time is one
+of the key aspect for test evaluation. It is important as code quality, organisation, unit tests and logic
+applied.
+
+1. Fix compilation.
+-------------------
+We have detected that the project is not compiling anymore.
+    * Check what is broken, fix it and continue development.
+
+To run this application, you need to execute main method from Application class.
+
+2. Calculate statistics and write the output.
+---------------------------------------------
+We need to calculate the statistics about the data inside the file data.example. These statistics will
+be stored in XML and JSON formats.
+
+The statistics that you have to calculate are:
+    * Total Number Of Words
+    * Total Number Of Unique Words
+    * Average Characters Per Word
+    * Most Repeated Word
+
+You can calculate all this data in class StatisticsCalculator.
+
+Use the classes that implements StatisticsWriter to store this data in XML and JSON formats.
+There is a XSD file with the XML scheme (statistics.xsd) to help you with the XML conversion,
+you can use it to make a Statistic bean to store all the statistics. Be sure everything works
+as expected by adding at least unit tests specified in StatisticsTest class. If you want, you
+may add additional test cases in the same class.
+
+3. Transform data.
+------------------
+You need to develop transformData method inside TransformersData class of transformers module. Given
+a list of words, you need to generate another list considering the requirements below. The requirements
+are not ordered and all of them must be met in its entirety.
+    * without repeated words
+    * sorted by length (first, words of one letter, second: words of two letters, etc)
+    * all words in upper case. Tip: All three
+
+Be sure everything works as expected by adding at least unit tests specified in TransformersDataTest
+class. If you want, you may add additional test cases in the same class.
