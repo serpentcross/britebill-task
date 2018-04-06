@@ -4,6 +4,7 @@ import com.britebill.interview.statistics.util.WordFilter;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class TransformerData {
 
-    final static Logger log = Logger.getLogger(TransformerData.class);
+    private final static Logger log = Logger.getLogger(TransformerData.class);
 
     public List<String> transformData(List<String> src) {
         // TODO: Add here your code
@@ -26,10 +27,7 @@ public class TransformerData {
         List<String> transformedData = wordFilter.getPureWordsFromData(src);
 
         transformedData.replaceAll(String::toUpperCase);
-
-        transformedData.sort(Comparator.naturalOrder());                    // just in case - sorting in alphabetical order
-
-        transformedData.sort(Comparator.comparing(s -> s.length()));
+        transformedData.sort(new ExtraComparator());
 
         return transformedData.stream().distinct().collect(Collectors.toList());
     }
