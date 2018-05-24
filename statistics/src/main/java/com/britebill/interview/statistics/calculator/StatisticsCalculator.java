@@ -67,12 +67,7 @@ public class StatisticsCalculator {
         Map<String, Integer> storage = new HashMap<>();
 
         for (String singleWord : data) {
-            Integer frequency = storage.get(singleWord);
-            if(frequency == null) {
-                storage.put(singleWord, 1);
-            } else {
-                storage.put(singleWord, frequency + 1);
-            }
+            storage.merge(singleWord, 1, (a, b) -> a + b);
         }
 
         return findMostFrequent(storage.entrySet());
