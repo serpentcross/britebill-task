@@ -1,11 +1,10 @@
 package com.britebill.interview.transformers;
 
 import com.britebill.interview.statistics.util.WordFilter;
+
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
