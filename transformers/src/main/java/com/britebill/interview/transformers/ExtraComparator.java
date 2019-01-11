@@ -2,7 +2,7 @@ package com.britebill.interview.transformers;
 
 import java.util.Comparator;
 
-public class ExtraComparator implements Comparator<String> {
+class ExtraComparator implements Comparator<String> {
 
     @Override
     public int compare(String o1, String o2) {
