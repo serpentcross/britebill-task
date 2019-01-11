@@ -9,7 +9,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.britebill.interview</groupId>
     <artifactId>transformers</artifactId>
     <packaging>jar</packaging>
 

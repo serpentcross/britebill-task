@@ -10,7 +10,6 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.britebill.interview</groupId>
     <artifactId>statistics</artifactId>
     <version>1.0-SNAPSHOT</version>
 
