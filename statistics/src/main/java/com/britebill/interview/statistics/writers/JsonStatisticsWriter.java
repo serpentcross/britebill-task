@@ -2,7 +2,9 @@ package com.britebill.interview.statistics.writers;
 
 import com.britebill.interview.statistics.beans.Statistics;
 import com.britebill.interview.statistics.constants.StatisticsTags;
+
 import org.apache.log4j.Logger;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -12,7 +14,7 @@ import java.io.FileWriter;
 
 public class JsonStatisticsWriter implements StatisticsWriter {
 
-    final static Logger log = Logger.getLogger(JsonStatisticsWriter.class);
+    private final static Logger log = Logger.getLogger(JsonStatisticsWriter.class);
 
     public void write(Statistics statistics, File file) {
 
@@ -27,6 +29,7 @@ public class JsonStatisticsWriter implements StatisticsWriter {
         String[] parts = statistics.getMostRepeatedWord().split("_");
 
         mostRepeatedWord.add(parts[0] + " : " + parts[1]);
+
         textStatistics.put(StatisticsTags.MOST_REPEATED_WORD, mostRepeatedWord);
 
         try (FileWriter fileWriter = new FileWriter(file)) {

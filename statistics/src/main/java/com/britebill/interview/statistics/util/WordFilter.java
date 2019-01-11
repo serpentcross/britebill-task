@@ -10,7 +10,7 @@ public class WordFilter {
 
     // I assume that we need pure words, without unknown symbols. Is it correct ?
 
-    final static Logger log = Logger.getLogger(WordFilter.class);
+    private final static Logger log = Logger.getLogger(WordFilter.class);
 
     public List<String> getPureWordsFromData(List<String> data) {
 

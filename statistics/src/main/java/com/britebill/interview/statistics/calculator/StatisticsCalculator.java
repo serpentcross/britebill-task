@@ -1,6 +1,7 @@
 package com.britebill.interview.statistics.calculator;
 
 import com.britebill.interview.statistics.util.WordFilter;
+
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class StatisticsCalculator {
 
     private WordFilter wordFilter = new WordFilter();
 
-    final static Logger log = Logger.getLogger(WordFilter.class);
+    private final static Logger log = Logger.getLogger(WordFilter.class);
 
     public Long getTotalNumberOfWords(List<String> data) {
         // TODO Add the implementation to get the total number of words here

@@ -4,6 +4,7 @@ import com.britebill.interview.statistics.beans.Statistics;
 import com.britebill.interview.statistics.constants.StatisticsTags;
 
 import org.apache.log4j.Logger;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -20,7 +21,7 @@ import java.io.File;
 
 public class XmlStatisticsWriter implements StatisticsWriter {
 
-    final static Logger log = Logger.getLogger(XmlStatisticsWriter.class);
+    private final static Logger log = Logger.getLogger(XmlStatisticsWriter.class);
 
     public void write(Statistics statistics, File file) {
 
